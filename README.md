@@ -1,9 +1,13 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a [Next.js](https://nextjs.org/) project which fetches data about past launches from the SpaceX API.
 
 ## Getting Started
 
-First, run the development server:
+First, install node modules:
 
+```bash
+npm install
+```
+then run the development server,
 ```bash
 npm run dev
 # or
@@ -11,6 +15,14 @@ yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Versions Used
+
+apollo/client: "3.5.5",<br>
+graphql: "16.0.1",<br>
+next: "12.0.4",<br>
+react: "17.0.2",<br>
+react-dom: "17.0.2"
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
