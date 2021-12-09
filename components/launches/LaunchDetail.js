@@ -29,11 +29,11 @@ function LaunchDetail(props) {
         </div>
       </div>
       
-      <div className={classes.link}>
-        <Link href="/" className={classes.link}>
-          Back to homepage
+      
+        <Link href="/">
+        <div className={classes.link}> Back to homepage</div>
         </Link>
-      </div>
+      
     </div>
   );
 }

@@ -3,7 +3,6 @@ import Head from 'next/head';
 import { READ_QUERY } from "../query/Query";
 import LaunchDetail from "../components/launches/LaunchDetail";
 import { Fragment } from "react";
-import Layout from "../components/layout/Layout";
 
 function LaunchDetails(props) {
   return (
@@ -11,7 +10,6 @@ function LaunchDetails(props) {
       <Head>
         <title>SpaceX API - Details</title>
       </Head>
-      <Layout />
       <LaunchDetail
         mission_name={props.launches.mission_name}
         rocket_name={props.launches.rocket_name}
@@ -37,7 +35,7 @@ export async function getStaticPaths() {
   const launches = data.launchesPast;
 
   return {
-    fallback: "blocking",
+    fallback: false,
     paths: launches.map((launch) => ({
       params: { launchId: launch.id },
     })),

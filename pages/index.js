@@ -1,13 +1,12 @@
 import Head from "next/head";
 import { ApolloClient, InMemoryCache } from "@apollo/client";
 import { READ_QUERY } from "../query/Query";
-import Layout from "../components/layout/Layout";
-import styles from "../styles/Home.module.css";
+import classes from "../styles/Home.module.css";
 import LaunchList from "../components/launches/LaunchList";
 
 export default function Home(props) {
   return (
-    <div className={styles.container}>
+    <div className={classes.container}>
       <Head>
         <title>SpaceX API</title>
         <meta
@@ -15,7 +14,6 @@ export default function Home(props) {
           content="Browsing through past SpaceX launches"
         />
       </Head>
-      <Layout/>
       <LaunchList launches={props.launches}/>
     </div>
   );
